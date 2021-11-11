@@ -1,7 +1,6 @@
 package com.sprunky.chucknorrisjokes.service;
 
 
-import com.sprunky.chucknorrisjokes.model.Joke;
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ public class JokeServiceImpl implements JokeService{
         this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
-    public Joke getJoke() {
-     return new Joke(chuckNorrisQuotes.getRandomQuote());
+    public String getJoke() {
+     return chuckNorrisQuotes.getRandomQuote();
     }
 }
